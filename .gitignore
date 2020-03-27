@@ -1,4 +1,5 @@
 .gradle
 build
+bin
 src/main/resources
 init.sql
