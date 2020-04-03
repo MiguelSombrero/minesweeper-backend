@@ -1,13 +1,20 @@
 plugins {
 	id 'org.springframework.boot' version '2.2.5.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
-	id 'java'
+	id 'java-library'
 }
 
 sourceCompatibility = '1.8'
 
 repositories {
 	mavenCentral()
+}
+
+configurations {
+    developmentOnly
+    runtimeClasspath {
+        extendsFrom developmentOnly
+    }
 }
 
 dependencies {
@@ -24,7 +31,8 @@ dependencies {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
 	
-	testImplementation 'org.springframework.boot:spring-boot-devtools'
+	developmentOnly("org.springframework.boot:spring-boot-devtools")
+	//testRuntimeOnly 'org.springframework.boot:spring-boot-devtools'
 }
 
 test {

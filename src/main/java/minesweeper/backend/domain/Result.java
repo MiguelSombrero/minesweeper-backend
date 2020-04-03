@@ -12,11 +12,11 @@ import org.springframework.data.jpa.domain.AbstractPersistable;
 public class Result extends AbstractPersistable<Long> implements Comparable<Result> {
 	
 	@NotNull
-	@Size(min = 1, max = 30)
+	@Size(min = 2, max = 30)
 	private String nickname;
 	
 	@NotNull
-	@Size(min = 1, max = 30)
+	@Size(min = 2, max = 30)
 	private String difficulty;
 	
 	@NotNull
