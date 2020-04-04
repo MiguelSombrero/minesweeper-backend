@@ -1,6 +1,7 @@
 .gradle
+.settings
+.classpath
 build
 bin
 data
-src/main/resources
-init.sql
+docker-entrypoint-initdb.d
