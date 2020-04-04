@@ -1,7 +1,7 @@
 .gradle
 .settings
 .classpath
-build
+/build
 bin
 data
 docker-entrypoint-initdb.d
