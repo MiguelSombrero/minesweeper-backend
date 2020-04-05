@@ -26,5 +26,4 @@ services:
         - 5432:5432
       volumes:
         - ./data:/var/lib/postgresql/data
-        #- ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d:ro
       container_name: minesweeper-db
