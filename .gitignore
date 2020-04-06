@@ -2,6 +2,7 @@
 .settings
 .classpath
 /build
+.vscode
 bin
 data
 docker-entrypoint-initdb.d

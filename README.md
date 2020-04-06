@@ -65,3 +65,4 @@ You need to specify corresponding environment variables to connect the database.
 ## TODO
 
 - Original minesweeper has functionality for opening all the surrounding tiles, when clicking both mouse buttons at the same time, adjacent to flagged tile.
+- User can hit mine with the first opening tile. Should change that board is created after the first press.
