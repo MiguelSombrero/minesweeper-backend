@@ -4,8 +4,6 @@
 
 Said propably no one ever. Even so, I like minesweeper. And Windows 10 minesweeper is bloated with adds and unnecessary eye candy. So here is a simple version of the game, without fancy animations.
 
-This repo is for the backend of the app. Frontend code can be found in [Minesweeper frontend](https://github.com/MiguelSombrero/minesweeper)
-
 ## Minesweeper live
 
 This app is running live on Heroku:
@@ -13,7 +11,11 @@ This app is running live on Heroku:
 
 [Minesweeper - Heroku](https://tranquil-cove-34394.herokuapp.com/)
 
-## Development Stack
+## Implementation
+
+Backend is serving frontend as a static content from folder `src/main/resources/static/build`. Frontend code can be found in [Minesweeper frontend](https://github.com/MiguelSombrero/minesweeper)
+
+### Development stack
 
 Backend
 - Java 8
@@ -36,7 +38,7 @@ Deployment
 
 ## Run with Docker
 
-Application root folder contains Dockerfile ja docker-compose.yml files, where you can configure you deployment. Application is using postgreSQL image as database. Note that postgreSQL is mounted on `./data` folder, where application stores it's data. You can change these settings from docker-compose.yml. 
+Application root folder contains Dockerfile and docker-compose.yml files, where you can configure you deployment. Application is using postgreSQL image as database. Note that postgreSQL is mounted on `./data` folder, where application stores it's data. You can change these settings from docker-compose.yml. 
 
 ### Build docker image and start
 
@@ -62,7 +64,8 @@ You need to specify corresponding environment variables to connect the database.
 
     http://localhost:8080
 
-## TODO
+## Implementation notes
 
-- Original minesweeper has functionality for opening all the surrounding tiles, when clicking both mouse buttons at the same time, adjacent to flagged tile.
-- User can hit mine with the first opening tile. Should change that board is created after the first press.
+Original minesweeper has functionality for opening all the surrounding tiles, when clicking both mouse buttons at the same time (if adjacent tiles have enough flags). I have implemented this with clicking only primary button. It was easier, and in my opinion, better.
+
+Now user can hit mine with the first tile. Board should be created after the first press.

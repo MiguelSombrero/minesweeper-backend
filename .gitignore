@@ -3,6 +3,8 @@
 .classpath
 /build
 .vscode
+.DS_Store
+.project
 bin
 data
 docker-entrypoint-initdb.d
